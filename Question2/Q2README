@@ -1,0 +1,3 @@
+This folder is functionally identical in terms of attachments and such, but now contains the bug with the commented fix above it located on lines 144-147. 
+You can enable and disable the bug to reproduce trace behavior in a similar way. Make sure AlwaysOn sampling is enabled.
+Tyler
