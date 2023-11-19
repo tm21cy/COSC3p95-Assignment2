@@ -1,0 +1,7 @@
+This is the Q1 state implementation of my assignment.
+The results.csv file contains the results of a standard output over 80 calls. It was used as a baseline for normal performance and is identical to the 80 calls used in Q2.
+PredicateResults is not applicable until Q2 but is still bundled here as a way to observe the rand>=15 predicate which is enabled by default in Q2.
+auto.sh can be ran to demonstrate console-logged auto instrumentation.
+Otherwise, Jaeger is used to track manual instrumentation. file-fetch is the primary trace of importance under the file-fetch service. filesystem-fetch is a threaded span.
+
+Tyler
