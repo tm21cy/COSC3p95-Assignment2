@@ -1,0 +1,23 @@
+INSTALLATION:
+Installation of OpenTelemetry components requires the OpenTelemetry SDK, OTLP modules, exporters - all of which are defined in the top of the app.py file. To exhaustively list them would be a bit difficult, but the OpenTelemetry SDK and API should provide near-all the necessary tools.
+
+Usage of the Jaeger UI requires Docker (and by extension WSL if on Windows) and can be executed with the following command:
+docker run --rm -e COLLECTOR_ZIPKIN_HOST_PORT=:9411 -p 16686:16686 -p 4317:4317 -p 4318:4318 -p 9411:9411 -p 6831:6831 jaegertracing/all-in-one:latest
+
+Ensure you have a files and received folder, with files labelled file1 through file20 (attached as ZIP) and received at least created.
+
+EXECUTION:
+Near the top of app.py, there are various variables that can be tuned. These are marked by a hashtag box.
+As well as this, under the SAMPLING METHOD comment, you can tune the boolean to provide either AlwaysOn or 30% random sampling.
+
+Python files: app.py is manually instrumented, so can run without command line arguments, but you should run the auto.sh file to run with automatic telemetry for Q1.
+Then, client.py can be run to make periodic calls to the server. Returned results are checked with the checksum feature and then stored in the received folder.
+
+Jaeger: see above
+
+OTHER OUTPUTS:
+CSV files, JSON trace bundles, UI screenshots, and the report will all be bundled under a common MEDIA folder.
+
+Tyler McDonald
+7235542
+tm21cy@brocku.ca
