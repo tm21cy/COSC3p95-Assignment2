@@ -1,5 +1,5 @@
 INSTALLATION:
-Installation of OpenTelemetry components requires the OpenTelemetry SDK, OTLP modules, exporters - all of which are defined in the top of the app.py file. To exhaustively list them would be a bit difficult, but the OpenTelemetry SDK and API should provide near-all the necessary tools.
+Installation of OpenTelemetry components requires the OpenTelemetry SDK, OpenTelemetry API (alternatively, opentelemetry-distro), opentelemetry-exporter-otlp-proto-grpc - all of which are defined in the top of the app.py file. To exhaustively list them would be a bit difficult, but the OpenTelemetry SDK and API should provide near-all the necessary tools.
 
 Usage of the Jaeger UI requires Docker (and by extension WSL if on Windows) and can be executed with the following command:
 docker run --rm -e COLLECTOR_ZIPKIN_HOST_PORT=:9411 -p 16686:16686 -p 4317:4317 -p 4318:4318 -p 9411:9411 -p 6831:6831 jaegertracing/all-in-one:latest
